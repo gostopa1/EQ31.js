@@ -101,7 +101,7 @@ function updateAnalysers(time) {
 		freqst=["20","25","31.5","40","50","63","80","100","125","180","200","250","315","400","500","630","800","1k","1.25K","1.6K","2K","2.5K","3.15K","4K","5K","6.3K","8K","10K","12.5K","16K","20K"];
 		stp=[1,3,4,5,6,7,9,11,14,18,22,27,33,42,53,66,83,105,131,165,209,261,327,414,521,653,827,1041,1301,1647,2081];
 		enp=[2,3,4,5,6,8,10,13,17,21,26,32,41,52,65,82,104,130,164,208,260,326,413,520,652,826,1040,1300,1646,2080,5096];
-		//numBars=31;
+		//numBars=32;
 		numBars=stp.length;
 		var BAR_WIDTH = Math.round(canvasWidth / numBars);
 		var SPACING = BAR_WIDTH+1;
@@ -118,7 +118,7 @@ function updateAnalysers(time) {
 		
 
         // Draw rectangle for each frequency bin.
-        for (var i = 0; i < numBars; ++i) {
+        for (var i = 1; i < numBars; ++i) {
             var magnitude = 0;
             var offset = Math.floor( i * multiplier );
 			var divid=0;
@@ -139,7 +139,7 @@ function updateAnalysers(time) {
 			analyserContext.textAlign = "center";
 			 analyserContext.restore();
 
-			analyserContext.fillText(freqst[i],i * SPACING+BAR_WIDTH/2, canvasHeight*0.5, BAR_WIDTH,1000);
+			analyserContext.fillText(freqst[i+1],i * SPACING+BAR_WIDTH/2, canvasHeight*0.5, BAR_WIDTH,1000);
 			
 			//analyserContext.fillRect(i * SPACING, canvasHeight, BAR_WIDTH, -magnitude);
 			analyserContext.fillRect(i * SPACING, canvasHeight, BAR_WIDTH, -magnitude);

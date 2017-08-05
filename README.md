@@ -1,4 +1,3 @@
-This is a spectrum limited to the 31 bands that typical 1/3 octave graphic equalizers use. My main motivation was the DBX231s but apparently all 31-band grapchic EQs use the same bands.
+This is a spectrum generator limited to 31 bands as typical 1/3 octave graphic equalizers use. Main idea was inspired when I got a DBX231 equalizer and wanted to make a tool I can use anywhere for clibration. 
 
-
-The idea was to create an online tool that I would be able to use for calibration putting it in the signal chain of a computer with access to this.
+So the idea was simple, you get microphone and a signal generator and just put the spectrum analyzer within the signal chain. It still takes some calibration, but you get a relative idea of what's going on in the corresponding frequency bands.
